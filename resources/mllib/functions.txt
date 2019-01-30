@@ -1,0 +1,87 @@
+
+float function LEASTML(a,b){
+inject""
+    -- LEAST is not implemeted jet in hyper
+    if(a < b){
+        return a;
+    }else{
+        return b;
+    }
+""
+}
+
+float function GREATESTML(a,b){
+inject""
+    -- GREATEST is not implemeted jet in hyper
+    if(a > b){
+        return a;
+    }else{
+        return b;
+    }
+""
+}
+
+float extern min(2){
+    postgres=LEAST
+    hyper=LEASTML
+    python=min
+}
+
+
+
+float extern max(2){
+    postgres=GREATEST
+    hyper=GREATESTML
+    python=max
+}
+
+float2 extern id(1){
+    postgres=matrix_identity
+    hyper=array_identity
+    python=np.identity
+}
+
+#ifdef HYPER
+float function sumArr(s){
+inject""
+    select sum(unnest(s)) as result;
+    return result;
+""
+}
+#endif
+
+float0 extern sum(1){
+    postgres=sum
+    hyper=sumArr
+    python=np.sum
+}
+
+float1 extern sum_axsis(2){
+    postgres=matrix_sum_axis
+    hyper=not_implemented
+    python=np.sum
+}
+
+
+
+float extern sqrt(1){
+    postgres=sqrt
+    hyper=sqrt
+    python=np.sqrt
+}
+
+float extern ln(1){
+    postgres=ln
+    hyper=ln
+    python=np.log
+}
+
+float extern abs(1)
+
+float extern exp(1){
+   postgres=exp
+   hyper=exp
+   python=np.exp
+}
+
+
