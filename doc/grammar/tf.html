@@ -1,0 +1,417 @@
+<html><head><style id="_defaultStyles">
+			:root { --background-color: #1e1e1e;
+--color: #d4d4d4;
+--font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", HelveticaNeue-Light, Ubuntu, "Droid Sans", sans-serif;
+--font-size: 13px;
+--font-weight: normal;
+--link-active-color: #3794ff;
+--link-color: #3794ff;
+--vscode-activityBar-background: #333333;
+--vscode-activityBar-dropBackground: rgba(255, 255, 255, 0.12);
+--vscode-activityBar-foreground: #ffffff;
+--vscode-activityBar-inactiveForeground: rgba(255, 255, 255, 0.6);
+--vscode-activityBarBadge-background: #007acc;
+--vscode-activityBarBadge-foreground: #ffffff;
+--vscode-badge-background: #4d4d4d;
+--vscode-badge-foreground: #ffffff;
+--vscode-breadcrumb-activeSelectionForeground: #e0e0e0;
+--vscode-breadcrumb-background: #1e1e1e;
+--vscode-breadcrumb-focusForeground: #e0e0e0;
+--vscode-breadcrumb-foreground: rgba(204, 204, 204, 0.8);
+--vscode-breadcrumbPicker-background: #252526;
+--vscode-button-background: #0e639c;
+--vscode-button-foreground: #ffffff;
+--vscode-button-hoverBackground: #1177bb;
+--vscode-debugExceptionWidget-background: #420b0d;
+--vscode-debugExceptionWidget-border: #a31515;
+--vscode-debugToolBar-background: #333333;
+--vscode-descriptionForeground: rgba(204, 204, 204, 0.7);
+--vscode-diffEditor-insertedTextBackground: rgba(155, 185, 85, 0.2);
+--vscode-diffEditor-removedTextBackground: rgba(255, 0, 0, 0.2);
+--vscode-dropdown-background: #3c3c3c;
+--vscode-dropdown-border: #3c3c3c;
+--vscode-dropdown-foreground: #f0f0f0;
+--vscode-editor-background: #1e1e1e;
+--vscode-editor-findMatchBackground: #515c6a;
+--vscode-editor-findMatchHighlightBackground: rgba(234, 92, 0, 0.33);
+--vscode-editor-findRangeHighlightBackground: rgba(58, 61, 65, 0.4);
+--vscode-editor-font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", HelveticaNeue-Light, Ubuntu, "Droid Sans", sans-serif;
+--vscode-editor-font-size: 13px;
+--vscode-editor-font-weight: normal;
+--vscode-editor-foreground: #d4d4d4;
+--vscode-editor-hoverHighlightBackground: rgba(38, 79, 120, 0.25);
+--vscode-editor-inactiveSelectionBackground: #3a3d41;
+--vscode-editor-lineHighlightBorder: #282828;
+--vscode-editor-rangeHighlightBackground: rgba(255, 255, 255, 0.04);
+--vscode-editor-selectionBackground: #264f78;
+--vscode-editor-selectionHighlightBackground: rgba(173, 214, 255, 0.15);
+--vscode-editor-snippetFinalTabstopHighlightBorder: #525252;
+--vscode-editor-snippetTabstopHighlightBackground: rgba(124, 124, 124, 0.3);
+--vscode-editor-wordHighlightBackground: rgba(87, 87, 87, 0.72);
+--vscode-editor-wordHighlightStrongBackground: rgba(0, 73, 114, 0.72);
+--vscode-editorActiveLineNumber-foreground: #c6c6c6;
+--vscode-editorBracketMatch-background: rgba(0, 100, 0, 0.1);
+--vscode-editorBracketMatch-border: #888888;
+--vscode-editorCodeLens-foreground: #999999;
+--vscode-editorCursor-foreground: #aeafad;
+--vscode-editorError-foreground: #ea4646;
+--vscode-editorGroup-border: #444444;
+--vscode-editorGroup-dropBackground: rgba(83, 89, 93, 0.5);
+--vscode-editorGroupHeader-noTabsBackground: #1e1e1e;
+--vscode-editorGroupHeader-tabsBackground: #252526;
+--vscode-editorGutter-addedBackground: #587c0c;
+--vscode-editorGutter-background: #1e1e1e;
+--vscode-editorGutter-commentRangeForeground: #c5c5c5;
+--vscode-editorGutter-deletedBackground: #94151b;
+--vscode-editorGutter-modifiedBackground: #0c7d9d;
+--vscode-editorHint-foreground: rgba(238, 238, 238, 0.7);
+--vscode-editorHoverWidget-background: #252526;
+--vscode-editorHoverWidget-border: #454545;
+--vscode-editorIndentGuide-activeBackground: #707070;
+--vscode-editorIndentGuide-background: #404040;
+--vscode-editorInfo-foreground: #008000;
+--vscode-editorLineNumber-activeForeground: #c6c6c6;
+--vscode-editorLineNumber-foreground: #858585;
+--vscode-editorLink-activeForeground: #4e94ce;
+--vscode-editorMarkerNavigation-background: #2d2d30;
+--vscode-editorMarkerNavigationError-background: #ea4646;
+--vscode-editorMarkerNavigationInfo-background: #008000;
+--vscode-editorMarkerNavigationWarning-background: #4d9e4d;
+--vscode-editorOverviewRuler-addedForeground: rgba(0, 122, 204, 0.6);
+--vscode-editorOverviewRuler-border: rgba(127, 127, 127, 0.3);
+--vscode-editorOverviewRuler-bracketMatchForeground: #a0a0a0;
+--vscode-editorOverviewRuler-commonContentForeground: rgba(96, 96, 96, 0.4);
+--vscode-editorOverviewRuler-currentContentForeground: rgba(64, 200, 174, 0.5);
+--vscode-editorOverviewRuler-deletedForeground: rgba(0, 122, 204, 0.6);
+--vscode-editorOverviewRuler-errorForeground: rgba(255, 18, 18, 0.7);
+--vscode-editorOverviewRuler-findMatchForeground: rgba(246, 185, 77, 0.7);
+--vscode-editorOverviewRuler-incomingContentForeground: rgba(64, 166, 255, 0.5);
+--vscode-editorOverviewRuler-infoForeground: rgba(18, 18, 136, 0.7);
+--vscode-editorOverviewRuler-modifiedForeground: rgba(0, 122, 204, 0.6);
+--vscode-editorOverviewRuler-rangeHighlightForeground: rgba(0, 122, 204, 0.6);
+--vscode-editorOverviewRuler-selectionHighlightForeground: rgba(160, 160, 160, 0.8);
+--vscode-editorOverviewRuler-warningForeground: rgba(18, 136, 18, 0.7);
+--vscode-editorOverviewRuler-wordHighlightForeground: rgba(160, 160, 160, 0.8);
+--vscode-editorOverviewRuler-wordHighlightStrongForeground: rgba(192, 160, 192, 0.8);
+--vscode-editorPane-background: #1e1e1e;
+--vscode-editorRuler-foreground: #5a5a5a;
+--vscode-editorSuggestWidget-background: #252526;
+--vscode-editorSuggestWidget-border: #454545;
+--vscode-editorSuggestWidget-foreground: #d4d4d4;
+--vscode-editorSuggestWidget-highlightForeground: #0097fb;
+--vscode-editorSuggestWidget-selectedBackground: #062f4a;
+--vscode-editorUnnecessaryCode-opacity: rgba(0, 0, 0, 0.67);
+--vscode-editorWarning-foreground: #4d9e4d;
+--vscode-editorWhitespace-foreground: rgba(227, 228, 226, 0.16);
+--vscode-editorWidget-background: #252526;
+--vscode-editorWidget-border: #454545;
+--vscode-errorForeground: #f48771;
+--vscode-extensionButton-prominentBackground: #327e36;
+--vscode-extensionButton-prominentForeground: #ffffff;
+--vscode-extensionButton-prominentHoverBackground: #28632b;
+--vscode-focusBorder: rgba(14, 99, 156, 0.8);
+--vscode-foreground: #cccccc;
+--vscode-gitDecoration-addedResourceForeground: #81b88b;
+--vscode-gitDecoration-conflictingResourceForeground: #6c6cc4;
+--vscode-gitDecoration-deletedResourceForeground: #c74e39;
+--vscode-gitDecoration-ignoredResourceForeground: #8c8c8c;
+--vscode-gitDecoration-modifiedResourceForeground: #e2c08d;
+--vscode-gitDecoration-submoduleResourceForeground: #8db9e2;
+--vscode-gitDecoration-untrackedResourceForeground: #73c991;
+--vscode-input-background: #3c3c3c;
+--vscode-input-foreground: #cccccc;
+--vscode-input-placeholderForeground: #a6a6a6;
+--vscode-inputOption-activeBorder: #007acc;
+--vscode-inputValidation-errorBackground: #5a1d1d;
+--vscode-inputValidation-errorBorder: #be1100;
+--vscode-inputValidation-infoBackground: #063b49;
+--vscode-inputValidation-infoBorder: #007acc;
+--vscode-inputValidation-warningBackground: #352a05;
+--vscode-inputValidation-warningBorder: #b89500;
+--vscode-list-activeSelectionBackground: #094771;
+--vscode-list-activeSelectionForeground: #ffffff;
+--vscode-list-dropBackground: #383b3d;
+--vscode-list-errorForeground: #f88070;
+--vscode-list-focusBackground: #062f4a;
+--vscode-list-highlightForeground: #0097fb;
+--vscode-list-hoverBackground: #2a2d2e;
+--vscode-list-inactiveFocusBackground: #313135;
+--vscode-list-inactiveSelectionBackground: #37373d;
+--vscode-list-invalidItemForeground: #b89500;
+--vscode-list-warningForeground: #4d9e4d;
+--vscode-menu-background: #252526;
+--vscode-menu-foreground: #cccccc;
+--vscode-menu-selectionBackground: #094771;
+--vscode-menu-selectionForeground: #ffffff;
+--vscode-menu-separatorBackground: #bbbbbb;
+--vscode-menubar-selectionBackground: rgba(255, 255, 255, 0.1);
+--vscode-menubar-selectionForeground: #cccccc;
+--vscode-merge-commonContentBackground: rgba(96, 96, 96, 0.16);
+--vscode-merge-commonHeaderBackground: rgba(96, 96, 96, 0.4);
+--vscode-merge-currentContentBackground: rgba(64, 200, 174, 0.2);
+--vscode-merge-currentHeaderBackground: rgba(64, 200, 174, 0.5);
+--vscode-merge-incomingContentBackground: rgba(64, 166, 255, 0.2);
+--vscode-merge-incomingHeaderBackground: rgba(64, 166, 255, 0.5);
+--vscode-notificationCenterHeader-background: #303031;
+--vscode-notificationLink-foreground: #3794ff;
+--vscode-notifications-background: #252526;
+--vscode-notifications-border: #303031;
+--vscode-panel-background: #1e1e1e;
+--vscode-panel-border: rgba(128, 128, 128, 0.35);
+--vscode-panel-dropBackground: rgba(255, 255, 255, 0.12);
+--vscode-panelTitle-activeBorder: rgba(128, 128, 128, 0.35);
+--vscode-panelTitle-activeForeground: #e7e7e7;
+--vscode-panelTitle-inactiveForeground: rgba(231, 231, 231, 0.6);
+--vscode-peekView-border: #007acc;
+--vscode-peekViewEditor-background: #001f33;
+--vscode-peekViewEditor-matchHighlightBackground: rgba(255, 143, 0, 0.6);
+--vscode-peekViewEditorGutter-background: #001f33;
+--vscode-peekViewResult-background: #252526;
+--vscode-peekViewResult-fileForeground: #ffffff;
+--vscode-peekViewResult-lineForeground: #bbbbbb;
+--vscode-peekViewResult-matchHighlightBackground: rgba(234, 92, 0, 0.3);
+--vscode-peekViewResult-selectionBackground: rgba(51, 153, 255, 0.2);
+--vscode-peekViewResult-selectionForeground: #ffffff;
+--vscode-peekViewTitle-background: #1e1e1e;
+--vscode-peekViewTitleDescription-foreground: rgba(204, 204, 204, 0.7);
+--vscode-peekViewTitleLabel-foreground: #ffffff;
+--vscode-pickerGroup-border: #3f3f46;
+--vscode-pickerGroup-foreground: #3794ff;
+--vscode-progressBar-background: #0e70c0;
+--vscode-scrollbar-shadow: #000000;
+--vscode-scrollbarSlider-activeBackground: rgba(191, 191, 191, 0.4);
+--vscode-scrollbarSlider-background: rgba(121, 121, 121, 0.4);
+--vscode-scrollbarSlider-hoverBackground: rgba(100, 100, 100, 0.7);
+--vscode-settings-checkboxBackground: #3c3c3c;
+--vscode-settings-checkboxBorder: #3c3c3c;
+--vscode-settings-checkboxForeground: #f0f0f0;
+--vscode-settings-dropdownBackground: #3c3c3c;
+--vscode-settings-dropdownBorder: #3c3c3c;
+--vscode-settings-dropdownForeground: #f0f0f0;
+--vscode-settings-dropdownListBorder: #454545;
+--vscode-settings-headerForeground: #e7e7e7;
+--vscode-settings-modifiedItemIndicator: #0c7d9d;
+--vscode-settings-numberInputBackground: #292929;
+--vscode-settings-numberInputForeground: #cccccc;
+--vscode-settings-textInputBackground: #292929;
+--vscode-settings-textInputForeground: #cccccc;
+--vscode-sideBar-background: #252526;
+--vscode-sideBar-dropBackground: rgba(255, 255, 255, 0.12);
+--vscode-sideBarSectionHeader-background: rgba(128, 128, 128, 0.2);
+--vscode-sideBarTitle-foreground: #bbbbbb;
+--vscode-statusBar-background: #007acc;
+--vscode-statusBar-debuggingBackground: #cc6633;
+--vscode-statusBar-debuggingForeground: #ffffff;
+--vscode-statusBar-foreground: #ffffff;
+--vscode-statusBar-noFolderBackground: #68217a;
+--vscode-statusBar-noFolderForeground: #ffffff;
+--vscode-statusBarItem-activeBackground: rgba(255, 255, 255, 0.18);
+--vscode-statusBarItem-hoverBackground: rgba(255, 255, 255, 0.12);
+--vscode-statusBarItem-prominentBackground: #388a34;
+--vscode-statusBarItem-prominentHoverBackground: #369432;
+--vscode-tab-activeBackground: #1e1e1e;
+--vscode-tab-activeForeground: #ffffff;
+--vscode-tab-border: #252526;
+--vscode-tab-inactiveBackground: #2d2d2d;
+--vscode-tab-inactiveForeground: rgba(255, 255, 255, 0.5);
+--vscode-tab-unfocusedActiveForeground: rgba(255, 255, 255, 0.5);
+--vscode-tab-unfocusedInactiveForeground: rgba(255, 255, 255, 0.25);
+--vscode-terminal-ansiBlack: #000000;
+--vscode-terminal-ansiBlue: #2472c8;
+--vscode-terminal-ansiBrightBlack: #666666;
+--vscode-terminal-ansiBrightBlue: #3b8eea;
+--vscode-terminal-ansiBrightCyan: #29b8db;
+--vscode-terminal-ansiBrightGreen: #23d18b;
+--vscode-terminal-ansiBrightMagenta: #d670d6;
+--vscode-terminal-ansiBrightRed: #f14c4c;
+--vscode-terminal-ansiBrightWhite: #e5e5e5;
+--vscode-terminal-ansiBrightYellow: #f5f543;
+--vscode-terminal-ansiCyan: #11a8cd;
+--vscode-terminal-ansiGreen: #0dbc79;
+--vscode-terminal-ansiMagenta: #bc3fbc;
+--vscode-terminal-ansiRed: #cd3131;
+--vscode-terminal-ansiWhite: #e5e5e5;
+--vscode-terminal-ansiYellow: #e5e510;
+--vscode-terminal-background: #1e1e1e;
+--vscode-terminal-border: rgba(128, 128, 128, 0.35);
+--vscode-terminal-foreground: #cccccc;
+--vscode-terminal-selectionBackground: rgba(255, 255, 255, 0.25);
+--vscode-textBlockQuote-background: rgba(127, 127, 127, 0.1);
+--vscode-textBlockQuote-border: rgba(0, 122, 204, 0.5);
+--vscode-textCodeBlock-background: rgba(10, 10, 10, 0.4);
+--vscode-textLink-activeForeground: #3794ff;
+--vscode-textLink-foreground: #3794ff;
+--vscode-textPreformat-foreground: #d7ba7d;
+--vscode-textSeparator-foreground: rgba(255, 255, 255, 0.18);
+--vscode-titleBar-activeBackground: #3c3c3c;
+--vscode-titleBar-activeForeground: #cccccc;
+--vscode-titleBar-inactiveBackground: rgba(60, 60, 60, 0.6);
+--vscode-titleBar-inactiveForeground: rgba(204, 204, 204, 0.6);
+--vscode-widget-shadow: #000000; }
+
+			body {
+				background-color: var(--vscode-editor-background);
+				color: var(--vscode-editor-foreground);
+				font-family: var(--vscode-editor-font-family);
+				font-weight: var(--vscode-editor-font-weight);
+				font-size: var(--vscode-editor-font-size);
+				margin: 0;
+				padding: 0 20px;
+			}
+
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+			a {
+				color: var(--vscode-textLink-foreground);
+			}
+
+			a:hover {
+				color: var(--vscode-textLink-activeForeground);
+			}
+
+			a:focus,
+			input:focus,
+			select:focus,
+			textarea:focus {
+				outline: 1px solid -webkit-focus-ring-color;
+				outline-offset: -1px;
+			}
+
+			code {
+				color: var(--vscode-textPreformat-foreground);
+			}
+
+			blockquote {
+				background: var(--vscode-textBlockQuote-background);
+				border-color: var(--vscode-textBlockQuote-border);
+			}
+
+			::-webkit-scrollbar {
+				width: 10px;
+				height: 10px;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background-color: rgba(121, 121, 121, 0.4);
+			}
+			body.vscode-light::-webkit-scrollbar-thumb {
+				background-color: rgba(100, 100, 100, 0.4);
+			}
+			body.vscode-high-contrast::-webkit-scrollbar-thumb {
+				background-color: rgba(111, 195, 223, 0.3);
+			}
+
+			::-webkit-scrollbar-thumb:hover {
+				background-color: rgba(100, 100, 100, 0.7);
+			}
+			body.vscode-light::-webkit-scrollbar-thumb:hover {
+				background-color: rgba(100, 100, 100, 0.7);
+			}
+			body.vscode-high-contrast::-webkit-scrollbar-thumb:hover {
+				background-color: rgba(111, 195, 223, 0.8);
+			}
+
+			::-webkit-scrollbar-thumb:active {
+				background-color: rgba(85, 85, 85, 0.8);
+			}
+			body.vscode-light::-webkit-scrollbar-thumb:active {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+			body.vscode-high-contrast::-webkit-scrollbar-thumb:active {
+				background-color: rgba(111, 195, 223, 0.8);
+			}
+			</style>
+                <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+                <link rel="stylesheet" type="text/css" href="light.css">
+<link rel="stylesheet" type="text/css" href="dark.css">
+			
+                <base href="file:///home/matthias/Documents/bachelorThesis-MatthiasBungeroth/implementation/compiler/resources/grammar/tf.g4">
+            </head>
+
+            <body class="vscode-dark">
+            
+
+        
+                
+                <div id="container"><h3>ADD</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'+'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>DIV</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'/'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>SUB</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'-'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>MUL</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'*'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>EQUALS</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'='</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>POW</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'^'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>OPEN_A</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'['</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>CLOSE_A</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">']'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>OPEN_B</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'('</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>CLOSE_B</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">')'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>OPEN_C</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'{'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>CLOSE_C</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'}'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>KOMMA</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">','</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>DOT</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'.'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>ALL</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">':'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>SEP</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">';'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>T</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">'T'</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>VARNAME</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="434" height="110" viewBox="0 0 434 110"><g transform="translate(.5 .5)"><path d="M 20 45 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 55h0"></path><path d="M394 55h0"></path><path d="M40 55h20"></path><g><path d="M60 55h0"></path><path d="M374 55h0"></path><g class="terminal"><path d="M60 55h0"></path><path d="M170 55h0"></path><rect x="60" y="44" width="110" height="22" rx="0" ry="0"></rect><text x="115" y="59">[a-zA-Z$_]</text></g><path d="M170 55h10"></path><g><path d="M180 55h0"></path><path d="M374 55h0"></path><path d="M180 55a10 10 0 0 0 10 -10v-15a10 10 0 0 1 10 -10"></path><g><path d="M200 20h154"></path></g><path d="M354 20a10 10 0 0 1 10 10v15a10 10 0 0 0 10 10"></path><path d="M180 55h20"></path><g><path d="M200 55h0"></path><path d="M354 55h0"></path><path d="M200 55h10"></path><g class="terminal"><path d="M210 55h0"></path><path d="M344 55h0"></path><rect x="210" y="44" width="134" height="22" rx="0" ry="0"></rect><text x="277" y="59">[a-zA-Z0-9$_]</text></g><path d="M344 55h10"></path><path d="M210 55a10 10 0 0 0 -10 10v15a10 10 0 0 0 10 10"></path><g><path d="M210 90h134"></path></g><path d="M344 90a10 10 0 0 0 10 -10v-15a10 10 0 0 0 -10 -10"></path></g><path d="M354 55h20"></path></g></g><path d="M374 55h20"></path></g><path d="M 394 55 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>INTEGER</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="210" height="86" viewBox="0 0 210 86"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M170 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M150 31h0"></path><g><path d="M60 31h0"></path><path d="M150 31h0"></path><path d="M60 31h10"></path><g class="terminal"><path d="M70 31h0"></path><path d="M140 31h0"></path><rect x="70" y="20" width="70" height="22" rx="0" ry="0"></rect><text x="105" y="35">[0-9]</text></g><path d="M140 31h10"></path><path d="M70 31a10 10 0 0 0 -10 10v15a10 10 0 0 0 10 10"></path><g><path d="M70 66h70"></path></g><path d="M140 66a10 10 0 0 0 10 -10v-15a10 10 0 0 0 -10 -10"></path></g></g><path d="M150 31h20"></path></g><path d="M 170 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>FLOAT</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="534" height="204" viewBox="0 0 534 204"><g transform="translate(.5 .5)"><path d="M 20 69 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 79h0"></path><path d="M494 79h0"></path><path d="M40 79h20"></path><g><path d="M60 79h0"></path><path d="M474 79h0"></path><g><path d="M60 79h0"></path><path d="M474 79h0"></path><path d="M60 79h20"></path><g><path d="M80 79h0"></path><path d="M454 79h0"></path><g><path d="M80 79h0"></path><path d="M170 79h0"></path><path d="M80 79h10"></path><g class="terminal"><path d="M90 79h0"></path><path d="M160 79h0"></path><rect x="90" y="68" width="70" height="22" rx="0" ry="0"></rect><text x="125" y="83">[0-9]</text></g><path d="M160 79h10"></path><path d="M90 79a10 10 0 0 0 -10 10v15a10 10 0 0 0 10 10"></path><g><path d="M90 114h70"></path></g><path d="M160 114a10 10 0 0 0 10 -10v-15a10 10 0 0 0 -10 -10"></path></g><path d="M170 79h10"></path><g><path d="M180 79h0"></path><path d="M454 79h0"></path><path d="M180 79a10 10 0 0 0 10 -10v-39a10 10 0 0 1 10 -10"></path><g><path d="M200 20h234"></path></g><path d="M434 20a10 10 0 0 1 10 10v39a10 10 0 0 0 10 10"></path><path d="M180 79h20"></path><g><path d="M200 79h0"></path><path d="M434 79h0"></path><path d="M200 79h20"></path><g><path d="M220 79h0"></path><path d="M414 79h0"></path><g class="terminal"><path d="M220 79h0"></path><path d="M274 79h0"></path><rect x="220" y="68" width="54" height="22" rx="0" ry="0"></rect><text x="247" y="83">[.]</text></g><path d="M274 79h10"></path><g><path d="M284 79h0"></path><path d="M414 79h0"></path><path d="M284 79a10 10 0 0 0 10 -10v-15a10 10 0 0 1 10 -10"></path><g><path d="M304 44h90"></path></g><path d="M394 44a10 10 0 0 1 10 10v15a10 10 0 0 0 10 10"></path><path d="M284 79h20"></path><g><path d="M304 79h0"></path><path d="M394 79h0"></path><path d="M304 79h10"></path><g class="terminal"><path d="M314 79h0"></path><path d="M384 79h0"></path><rect x="314" y="68" width="70" height="22" rx="0" ry="0"></rect><text x="349" y="83">[0-9]</text></g><path d="M384 79h10"></path><path d="M314 79a10 10 0 0 0 -10 10v15a10 10 0 0 0 10 10"></path><g><path d="M314 114h70"></path></g><path d="M384 114a10 10 0 0 0 10 -10v-15a10 10 0 0 0 -10 -10"></path></g><path d="M394 79h20"></path></g></g><path d="M414 79h20"></path></g><path d="M434 79h20"></path></g></g><path d="M454 79h20"></path><path d="M60 79a10 10 0 0 1 10 10v50a10 10 0 0 0 10 10"></path><g><path d="M80 149h105"></path><path d="M349 149h105"></path><g class="terminal"><path d="M185 149h0"></path><path d="M239 149h0"></path><rect x="185" y="138" width="54" height="22" rx="0" ry="0"></rect><text x="212" y="153">[.]</text></g><path d="M239 149h10"></path><path d="M249 149h10"></path><g><path d="M259 149h0"></path><path d="M349 149h0"></path><path d="M259 149h10"></path><g class="terminal"><path d="M269 149h0"></path><path d="M339 149h0"></path><rect x="269" y="138" width="70" height="22" rx="0" ry="0"></rect><text x="304" y="153">[0-9]</text></g><path d="M339 149h10"></path><path d="M269 149a10 10 0 0 0 -10 10v15a10 10 0 0 0 10 10"></path><g><path d="M269 184h70"></path></g><path d="M339 184a10 10 0 0 0 10 -10v-15a10 10 0 0 0 -10 -10"></path></g></g><path d="M454 149a10 10 0 0 0 10 -10v-50a10 10 0 0 1 10 -10"></path></g></g><path d="M474 79h20"></path></g><path d="M 494 79 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>NEWLINE</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="334" height="132" viewBox="0 0 334 132"><g transform="translate(.5 .5)"><path d="M 20 45 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 55h0"></path><path d="M294 55h0"></path><path d="M40 55h20"></path><g><path d="M60 55h0"></path><path d="M274 55h0"></path><g><path d="M60 55h0"></path><path d="M274 55h0"></path><path d="M60 55h20"></path><g><path d="M80 55h0"></path><path d="M254 55h0"></path><g><path d="M80 55h0"></path><path d="M182 55h0"></path><path d="M80 55a10 10 0 0 0 10 -10v-15a10 10 0 0 1 10 -10"></path><g><path d="M100 20h62"></path></g><path d="M162 20a10 10 0 0 1 10 10v15a10 10 0 0 0 10 10"></path><path d="M80 55h20"></path><g class="terminal"><path d="M100 55h0"></path><path d="M162 55h0"></path><rect x="100" y="44" width="62" height="22" rx="0" ry="0"></rect><text x="131" y="59">'\r'</text></g><path d="M162 55h20"></path></g><path d="M182 55h10"></path><g class="terminal"><path d="M192 55h0"></path><path d="M254 55h0"></path><rect x="192" y="44" width="62" height="22" rx="0" ry="0"></rect><text x="223" y="59">'\n'</text></g></g><path d="M254 55h20"></path><path d="M60 55a10 10 0 0 1 10 10v26a10 10 0 0 0 10 10"></path><g><path d="M80 101h56"></path><path d="M198 101h56"></path><g class="terminal"><path d="M136 101h0"></path><path d="M198 101h0"></path><rect x="136" y="90" width="62" height="22" rx="0" ry="0"></rect><text x="167" y="105">'\r'</text></g></g><path d="M254 101a10 10 0 0 0 10 -10v-26a10 10 0 0 1 10 -10"></path></g></g><path d="M274 55h20"></path></g><path d="M 294 55 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>TAB</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="270" height="154" viewBox="0 0 270 154"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M230 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M210 31h0"></path><g><path d="M60 31h0"></path><path d="M210 31h0"></path><path d="M60 31h20"></path><g><path d="M80 31h24"></path><path d="M166 31h24"></path><g class="terminal"><path d="M104 31h0"></path><path d="M166 31h0"></path><rect x="104" y="20" width="62" height="22" rx="0" ry="0"></rect><text x="135" y="35">'\t'</text></g></g><path d="M190 31h20"></path><path d="M60 31a10 10 0 0 1 10 10v26a10 10 0 0 0 10 10"></path><g><path d="M80 77h0"></path><path d="M190 77h0"></path><g class="terminal"><path d="M80 77h0"></path><path d="M190 77h0"></path><rect x="80" y="66" width="110" height="22" rx="0" ry="0"></rect><text x="135" y="81">'        '</text></g></g><path d="M190 77a10 10 0 0 0 10 -10v-26a10 10 0 0 1 10 -10"></path><path d="M60 31a10 10 0 0 1 10 10v72a10 10 0 0 0 10 10"></path><g><path d="M80 123h16"></path><path d="M174 123h16"></path><g class="terminal"><path d="M96 123h0"></path><path d="M174 123h0"></path><rect x="96" y="112" width="78" height="22" rx="0" ry="0"></rect><text x="135" y="127">'    '</text></g></g><path d="M190 123a10 10 0 0 0 10 -10v-72a10 10 0 0 1 10 -10"></path></g></g><path d="M210 31h20"></path></g><path d="M 230 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>WHITESPACE</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="174" height="62" viewBox="0 0 174 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M134 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M114 31h0"></path><g class="terminal"><path d="M60 31h0"></path><path d="M114 31h0"></path><rect x="60" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="87" y="35">' '</text></g></g><path d="M114 31h20"></path></g><path d="M 134 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+
+<h3>file</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="280" height="62" viewBox="0 0 280 62"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 0 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M240 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h0"></path><path d="M220 31h0"></path><g class="non-terminal"><path d="M60 31h0"></path><path d="M146 31h0"></path><rect x="60" y="20" width="86" height="22" rx="8" ry="8"></rect><text x="103" y="35">mathexp</text></g><path d="M146 31h10"></path><path d="M156 31h10"></path><g class="terminal"><path d="M166 31h0"></path><path d="M220 31h0"></path><rect x="166" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="193" y="35">EOF</text></g></g><path d="M220 31h20"></path></g><path d="M 240 31 h 20 m 0 -10 v 20"></path></g></svg>
+
+<h3>mathexp</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="548" height="660" viewBox="0 0 548 660"><g transform="translate(.5 .5)"><path d="M 20 21 v 20 m 0 -10 h 20.5"></path><g><path d="M40 31h0"></path><path d="M508 31h0"></path><path d="M40 31h20"></path><g><path d="M60 31h95"></path><path d="M393 31h95"></path><g class="non-terminal"><path d="M155 31h0"></path><path d="M241 31h0"></path><rect x="155" y="20" width="86" height="22" rx="8" ry="8"></rect><text x="198" y="35">mathexp</text></g><path d="M241 31h10"></path><g><path d="M251 31h0"></path><path d="M345 31h0"></path><path d="M251 31h20"></path><g><path d="M271 31h0"></path><path d="M325 31h0"></path><g class="terminal"><path d="M271 31h0"></path><path d="M325 31h0"></path><rect x="271" y="20" width="54" height="22" rx="0" ry="0"></rect><text x="298" y="35">DOT</text></g></g><path d="M325 31h20"></path><path d="M251 31a10 10 0 0 1 10 10v26a10 10 0 0 0 10 10"></path><g><path d="M271 77h0"></path><path d="M325 77h0"></path><g class="terminal"><path d="M271 77h0"></path><path d="M325 77h0"></path><rect x="271" y="66" width="54" height="22" rx="0" ry="0"></rect><text x="298" y="81">POW</text></g></g><path d="M325 77a10 10 0 0 0 10 -10v-26a10 10 0 0 1 10 -10"></path></g><path d="M345 31h10"></path><g class="terminal"><path d="M355 31h0"></path><path d="M393 31h0"></path><rect x="355" y="20" width="38" height="22" rx="0" ry="0"></rect><text x="374" y="35">T</text></g></g><path d="M488 31h20"></path><path d="M40 31a10 10 0 0 1 10 10v72a10 10 0 0 0 10 10"></path><g><path d="M60 123h81"></path><path d="M407 123h81"></path><g class="non-terminal"><path d="M141 123h0"></path><path d="M227 123h0"></path><rect x="141" y="112" width="86" height="22" rx="8" ry="8"></rect><text x="184" y="127">mathexp</text></g><path d="M227 123h10"></path><path d="M237 123h10"></path><g class="terminal"><path d="M247 123h0"></path><path d="M301 123h0"></path><rect x="247" y="112" width="54" height="22" rx="0" ry="0"></rect><text x="274" y="127">POW</text></g><path d="M301 123h10"></path><path d="M311 123h10"></path><g class="non-terminal"><path d="M321 123h0"></path><path d="M407 123h0"></path><rect x="321" y="112" width="86" height="22" rx="8" ry="8"></rect><text x="364" y="127">mathexp</text></g></g><path d="M488 123a10 10 0 0 0 10 -10v-72a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v118a10 10 0 0 0 10 10"></path><g><path d="M60 169h134"></path><path d="M354 169h134"></path><g class="terminal"><path d="M194 169h0"></path><path d="M248 169h0"></path><rect x="194" y="158" width="54" height="22" rx="0" ry="0"></rect><text x="221" y="173">SUB</text></g><path d="M248 169h10"></path><path d="M258 169h10"></path><g class="non-terminal"><path d="M268 169h0"></path><path d="M354 169h0"></path><rect x="268" y="158" width="86" height="22" rx="8" ry="8"></rect><text x="311" y="173">mathexp</text></g></g><path d="M488 169a10 10 0 0 0 10 -10v-118a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v164a10 10 0 0 0 10 10"></path><g><path d="M60 215h71"></path><path d="M417 215h71"></path><g class="non-terminal"><path d="M131 215h0"></path><path d="M217 215h0"></path><rect x="131" y="204" width="86" height="22" rx="8" ry="8"></rect><text x="174" y="219">mathexp</text></g><path d="M217 215h10"></path><g><path d="M227 215h0"></path><path d="M321 215h0"></path><path d="M227 215h20"></path><g><path d="M247 215h0"></path><path d="M301 215h0"></path><g class="terminal"><path d="M247 215h0"></path><path d="M301 215h0"></path><rect x="247" y="204" width="54" height="22" rx="0" ry="0"></rect><text x="274" y="219">MUL</text></g></g><path d="M301 215h20"></path><path d="M227 215a10 10 0 0 1 10 10v26a10 10 0 0 0 10 10"></path><g><path d="M247 261h0"></path><path d="M301 261h0"></path><g class="terminal"><path d="M247 261h0"></path><path d="M301 261h0"></path><rect x="247" y="250" width="54" height="22" rx="0" ry="0"></rect><text x="274" y="265">DIV</text></g></g><path d="M301 261a10 10 0 0 0 10 -10v-26a10 10 0 0 1 10 -10"></path></g><path d="M321 215h10"></path><g class="non-terminal"><path d="M331 215h0"></path><path d="M417 215h0"></path><rect x="331" y="204" width="86" height="22" rx="8" ry="8"></rect><text x="374" y="219">mathexp</text></g></g><path d="M488 215a10 10 0 0 0 10 -10v-164a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v256a10 10 0 0 0 10 10"></path><g><path d="M60 307h71"></path><path d="M417 307h71"></path><g class="non-terminal"><path d="M131 307h0"></path><path d="M217 307h0"></path><rect x="131" y="296" width="86" height="22" rx="8" ry="8"></rect><text x="174" y="311">mathexp</text></g><path d="M217 307h10"></path><g><path d="M227 307h0"></path><path d="M321 307h0"></path><path d="M227 307h20"></path><g><path d="M247 307h0"></path><path d="M301 307h0"></path><g class="terminal"><path d="M247 307h0"></path><path d="M301 307h0"></path><rect x="247" y="296" width="54" height="22" rx="0" ry="0"></rect><text x="274" y="311">ADD</text></g></g><path d="M301 307h20"></path><path d="M227 307a10 10 0 0 1 10 10v26a10 10 0 0 0 10 10"></path><g><path d="M247 353h0"></path><path d="M301 353h0"></path><g class="terminal"><path d="M247 353h0"></path><path d="M301 353h0"></path><rect x="247" y="342" width="54" height="22" rx="0" ry="0"></rect><text x="274" y="357">SUB</text></g></g><path d="M301 353a10 10 0 0 0 10 -10v-26a10 10 0 0 1 10 -10"></path></g><path d="M321 307h10"></path><g class="non-terminal"><path d="M331 307h0"></path><path d="M417 307h0"></path><rect x="331" y="296" width="86" height="22" rx="8" ry="8"></rect><text x="374" y="311">mathexp</text></g></g><path d="M488 307a10 10 0 0 0 10 -10v-256a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v348a10 10 0 0 0 10 10"></path><g><path d="M60 399h69"></path><path d="M419 399h69"></path><g class="terminal"><path d="M129 399h0"></path><path d="M207 399h0"></path><rect x="129" y="388" width="78" height="22" rx="0" ry="0"></rect><text x="168" y="403">OPEN_B</text></g><path d="M207 399h10"></path><path d="M217 399h10"></path><g class="non-terminal"><path d="M227 399h0"></path><path d="M313 399h0"></path><rect x="227" y="388" width="86" height="22" rx="8" ry="8"></rect><text x="270" y="403">mathexp</text></g><path d="M313 399h10"></path><path d="M323 399h10"></path><g class="terminal"><path d="M333 399h0"></path><path d="M419 399h0"></path><rect x="333" y="388" width="86" height="22" rx="0" ry="0"></rect><text x="376" y="403">CLOSE_B</text></g></g><path d="M488 399a10 10 0 0 0 10 -10v-348a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v394a10 10 0 0 0 10 10"></path><g><path d="M60 445h53"></path><path d="M435 445h53"></path><g class="terminal"><path d="M113 445h0"></path><path d="M191 445h0"></path><rect x="113" y="434" width="78" height="22" rx="0" ry="0"></rect><text x="152" y="449">OPEN_A</text></g><path d="M191 445h10"></path><path d="M201 445h10"></path><g class="non-terminal"><path d="M211 445h0"></path><path d="M329 445h0"></path><rect x="211" y="434" width="118" height="22" rx="8" ry="8"></rect><text x="270" y="449">mathexplist</text></g><path d="M329 445h10"></path><path d="M339 445h10"></path><g class="terminal"><path d="M349 445h0"></path><path d="M435 445h0"></path><rect x="349" y="434" width="86" height="22" rx="0" ry="0"></rect><text x="392" y="449">CLOSE_A</text></g></g><path d="M488 445a10 10 0 0 0 10 -10v-394a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v440a10 10 0 0 0 10 10"></path><g><path d="M60 491h171"></path><path d="M317 491h171"></path><g class="terminal"><path d="M231 491h0"></path><path d="M317 491h0"></path><rect x="231" y="480" width="86" height="22" rx="0" ry="0"></rect><text x="274" y="495">VARNAME</text></g></g><path d="M488 491a10 10 0 0 0 10 -10v-440a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v486a10 10 0 0 0 10 10"></path><g><path d="M60 537h151"></path><path d="M337 537h151"></path><g><path d="M211 537h0"></path><path d="M337 537h0"></path><path d="M211 537h20"></path><g><path d="M231 537h0"></path><path d="M317 537h0"></path><g class="terminal"><path d="M231 537h0"></path><path d="M317 537h0"></path><rect x="231" y="526" width="86" height="22" rx="0" ry="0"></rect><text x="274" y="541">INTEGER</text></g></g><path d="M317 537h20"></path><path d="M211 537a10 10 0 0 1 10 10v26a10 10 0 0 0 10 10"></path><g><path d="M231 583h8"></path><path d="M309 583h8"></path><g class="terminal"><path d="M239 583h0"></path><path d="M309 583h0"></path><rect x="239" y="572" width="70" height="22" rx="0" ry="0"></rect><text x="274" y="587">FLOAT</text></g></g><path d="M317 583a10 10 0 0 0 10 -10v-26a10 10 0 0 1 10 -10"></path></g></g><path d="M488 537a10 10 0 0 0 10 -10v-486a10 10 0 0 1 10 -10"></path><path d="M40 31a10 10 0 0 1 10 10v578a10 10 0 0 0 10 10"></path><g><path d="M60 629h0"></path><path d="M488 629h0"></path><g class="terminal"><path d="M60 629h0"></path><path d="M146 629h0"></path><rect x="60" y="618" width="86" height="22" rx="0" ry="0"></rect><text x="103" y="633">VARNAME</text></g><path d="M146 629h10"></path><path d="M156 629h10"></path><g class="terminal"><path d="M166 629h0"></path><path d="M244 629h0"></path><rect x="166" y="618" width="78" height="22" rx="0" ry="0"></rect><text x="205" y="633">OPEN_B</text></g><path d="M244 629h10"></path><path d="M254 629h10"></path><g class="non-terminal"><path d="M264 629h0"></path><path d="M382 629h0"></path><rect x="264" y="618" width="118" height="22" rx="8" ry="8"></rect><text x="323" y="633">mathexplist</text></g><path d="M382 629h10"></path><path d="M392 629h10"></path><g class="terminal"><path d="M402 629h0"></path><path d="M488 629h0"></path><rect x="402" y="618" width="86" height="22" rx="0" ry="0"></rect><text x="445" y="633">CLOSE_B</text></g></g><path d="M488 629a10 10 0 0 0 10 -10v-578a10 10 0 0 1 10 -10"></path></g><path d="M 508 31 h 20 m 0 -10 v 20"></path></g></svg>
+
+<h3>mathexplist</h3>
+<svg xmlns="http://www.w3.org/2000/svg" class="railroad-diagram" width="492" height="110" viewBox="0 0 492 110"><g transform="translate(.5 .5)"><path d="M 20 45 v 20 m 0 -10 h 20.5"></path><g><path d="M40 55h0"></path><path d="M452 55h0"></path><path d="M40 55h20"></path><g><path d="M60 55h0"></path><path d="M432 55h0"></path><g class="non-terminal"><path d="M60 55h0"></path><path d="M146 55h0"></path><rect x="60" y="44" width="86" height="22" rx="8" ry="8"></rect><text x="103" y="59">mathexp</text></g><path d="M146 55h10"></path><g><path d="M156 55h0"></path><path d="M432 55h0"></path><path d="M156 55a10 10 0 0 0 10 -10v-15a10 10 0 0 1 10 -10"></path><g><path d="M176 20h236"></path></g><path d="M412 20a10 10 0 0 1 10 10v15a10 10 0 0 0 10 10"></path><path d="M156 55h20"></path><g><path d="M176 55h0"></path><path d="M412 55h0"></path><path d="M176 55h10"></path><g><path d="M186 55h0"></path><path d="M402 55h0"></path><path d="M186 55h20"></path><g><path d="M206 55h0"></path><path d="M382 55h0"></path><g class="terminal"><path d="M206 55h0"></path><path d="M276 55h0"></path><rect x="206" y="44" width="70" height="22" rx="0" ry="0"></rect><text x="241" y="59">KOMMA</text></g><path d="M276 55h10"></path><path d="M286 55h10"></path><g class="non-terminal"><path d="M296 55h0"></path><path d="M382 55h0"></path><rect x="296" y="44" width="86" height="22" rx="8" ry="8"></rect><text x="339" y="59">mathexp</text></g></g><path d="M382 55h20"></path></g><path d="M402 55h10"></path><path d="M186 55a10 10 0 0 0 -10 10v15a10 10 0 0 0 10 10"></path><g><path d="M186 90h216"></path></g><path d="M402 90a10 10 0 0 0 10 -10v-15a10 10 0 0 0 -10 -10"></path></g><path d="M412 55h20"></path></g></g><path d="M432 55h20"></path></g><path d="M 452 55 h 20 m 0 -10 v 20"></path></g></svg>
+
+</div></body></html>
