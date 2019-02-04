@@ -83,7 +83,31 @@ LD_LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH
 sudo ldconfig -v
 ```
+## Server
+The server accepts JSON data of the following form (default port 5000):
+```
+{"lang": "python", "code": "A=[[2]] \n print '%',A"}
+```
+Possible destination languages are {python, postgres, hyper} (case insensitive)
+The answer looks like:
+```
+{"lang": "PYTHON","result": "import numpy as np
 
 
+def main():
 
+    A = np.array([ np.array([ 2])])
+    print( '{}'.format(  A))
+
+if __name__ == "__main__": main()
+"}
+
+```
+
+## Dockerfile
+To run ml2sql in a docker container
+```
+docker build -t ml2sql .
+docker run --rm -p 5000:5000 ml2sql
+```
 
