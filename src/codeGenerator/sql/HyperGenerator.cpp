@@ -389,7 +389,8 @@ namespace CodeGenerator {
         string thresholds = threshold ? threshold->getContext(): GD_THRESHOLD_DEFAULT;
         string batchsizes = batchsize ? threshold->getContext() : GD_BATCH_SIZE_DEFAULT;
 
-        string sep = "";
+        string sep = "",optstring="",placestring="";
+        stringstream ss;
         ss << "select ";
         for(pair<string,string> &p : *opt){
             ss << sep << p.first;
