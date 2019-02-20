@@ -387,30 +387,29 @@ namespace CodeGenerator {
         string maxStepss = maxSteps ? maxSteps->getContext(): GD_MAX_STPES_DEFAULT;
         string stepSizes = stepSize ? stepSize->getContext(): GD_LEARNING_RATE_DEFAULT;
         string thresholds = threshold ? threshold->getContext(): GD_THRESHOLD_DEFAULT;
-        stringstream ss;
+        string batchsizes = batchsize ? threshold->getContext() : GD_BATCH_SIZE_DEFAULT;
+
+        string sep = "";
         ss << "select ";
-        string sep;
         for(pair<string,string> &p : *opt){
             ss << sep << p.first;
-            sep = ", ";
+            optstring += sep;
+            optstring += p.first;
+            sep = ",";
         }
-        ss << " from gradientdescent(" << endl;
-        ss << ML_TAB << "arrays_to_table(";
         sep = "";
-        for(string &s : *data){
-            ss << sep << s;
-            sep = ", ";
+        for(string &d : *data){
+            placestring += sep;
+            placestring += d;
+            sep = ",";
         }
-        ss << "), select "<< endl;
-        sep = "";
-        for(pair<string,string> &p : *opt){
-            ss << sep << p.first;
-            sep = ", ";
-        }
-        ss << "),"<< endl;
-        ss << ML_TAB << "λ(t,w) " <<  function << "," << endl;
-        ss << ML_TAB << stepSizes << ", " << thresholds << ", " << maxStepss;
-        ss << ");";
+
+        ss << " from array_gd('" << function << "','" << optstring << "','" 
+            << placestring << '\'' << ',' << stepSizes << "::double precision, " 
+            << thresholds << "::double precision, " << maxStepss << ',' << batchsizes
+            << ',' << optstring << ',' << placestring << ')' << EXPEND;
+
+
         return new Variable(ss.str(), Variable::VOID);
     }
 
