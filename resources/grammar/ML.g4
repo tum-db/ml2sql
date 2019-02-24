@@ -2,7 +2,7 @@ grammar ML;
 
 file
 	: expressionlist=explist EOF   #file_compile
-	; 
+	;
 
 explist
 	:(NEWLINE+ expressions+=expression)* NEWLINE*
@@ -11,7 +11,7 @@ explist
 
 
 expression
-	: INJECT                                                                                          	#expression_inject         
+	: INJECT                                                                                          	#expression_inject
 	| CREATE TENSOR newName=VARNAME FROM oldName=VARNAME
 			OPEN_B columns=varlist CLOSE_B      								        #expression_createTensor
 	| name=VARNAME list=accsesslist ALL value=mathexp                                                   #expression_defineTensor
@@ -28,7 +28,7 @@ expression
 	| word=(CONTINUE | BREAK)                                                                         	#expression_keyword
 	| (res+=VARNAME (KOMMA res+=VARNAME)+  EQUALS)? 													//The plus ensures that the res.size == 1 gets handeld in setvar with mathexp
 		funcName=VARNAME OPEN_B ( parms+=mathexp (KOMMA parms+=mathexp)*)? CLOSE_B                      #expression_functionCall
-	| ret+=returnType* FUCNTION funcName=VARNAME 	
+	| ret+=returnType* FUCNTION funcName=VARNAME
 		OPEN_B parms+=VARNAME? (KOMMA parms+=VARNAME)*  CLOSE_B OPEN_C  expressionList=explist  CLOSE_C	#expression_functionDef
 	| fun=functions																						#expression_externFunction
 	| RETURN  ret+=mathexp (KOMMA ret+=mathexp)* NEWLINE*                                             	#expression_return
@@ -38,7 +38,7 @@ expression
 	| PRINT toPrint=mathexplist																			#expression_print
 	| op=(READCSV|WRITECSV)
 		OPEN_C
-			( 
+			(
 				(  (NEWLINE )+ 'name:'  outname=VARNAME     )
 				| ((NEWLINE )+ 'file:'   filename=STRING     )
 				| ((NEWLINE )+ 'columns:'   columns=varlist     )
@@ -46,7 +46,7 @@ expression
 				| ((NEWLINE )+ 'replace:'   OPEN_C   NEWLINE*   (rep+=STRING ALL by+=STRING   NEWLINE*  )+ CLOSE_C )
 				| ((NEWLINE )+ 'delete empty entries')
 				| ((NEWLINE )+ 'replace empty entries:'  repEmptyBy=mathexp)
-			)+	(NEWLINE )+																		
+			)+	(NEWLINE )+
         CLOSE_C																							#expression_readcsv
     | GRADIENTDESCENT
         OPEN_C
@@ -81,7 +81,7 @@ mathexp
 	| left=mathexp op=(MUL|DIV) right=mathexp       #mathexp_mul
 	| left=mathexp op=(ADD|SUB) right=mathexp       #mathexp_add
 	| OPEN_B expr=mathexp CLOSE_B                   #mathexp_brace
-	| OPEN_A  list=mathexplist CLOSE_A              #mathexp_tensor
+	| OPEN_A (NEWLINE)? list=mathexplist (NEWLINE)? CLOSE_A              #mathexp_tensor
 	| funcName=VARNAME 	OPEN_B ( parms+=mathexp
 		(KOMMA parms+=mathexp)*)? CLOSE_B			#mathexp_functionCall
 	| var=VARNAME                                   #mathexp_var
@@ -115,7 +115,7 @@ externFunName
 
 
 mathexplist
-	: (expressions+=mathexp (KOMMA expressions+=mathexp)*)?
+	: (expressions+=mathexp (KOMMA (NEWLINE)? expressions+=mathexp)*)?
 	;
 
 
@@ -125,7 +125,7 @@ accsesslist
 	;
 
 accessor
-	: ac=mathexp                    #accessor_mathexp 
+	: ac=mathexp                    #accessor_mathexp
 	| from=mathexp ALL to=mathexp   #accessor_fromto
 	| ALL                           #accessor_all
 	;
