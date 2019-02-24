@@ -19,13 +19,13 @@ def main():
     #compPath = os.path.realpath(os.path.dirname(os.path.abspath(__file__)))
     if len(sys.argv) <= 1:
         print("No input file specified")
-    path =  sys.argv[1]
+    path = sys.argv[1]
     files = glob.glob( path +"/*" )
     result = ""
 
     for f in files:
         p = sb.Popen("xxd -i " + f, shell=True , stdout=sb.PIPE )
-        output =  p.communicate()[0]
+        output = p.communicate()[0].decode()
         result = result + output.replace('\\n', '\n') + os.linesep + os.linesep
 
 
