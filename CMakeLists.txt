@@ -3,6 +3,8 @@ project(ml2sql,ml2sqlserver)
 
 
 set(CMAKE_CXX_STANDARD 14)
+set(ANTLR_PATH "/usr/local/lib/antlr-4.7.1-complete.jar" CACHE STRING "Antlr4 jar path")
+set(ANTLR_RUNTIME "/usr/local/include/antlr4-runtime/" CACHE STRING "Antlr4 runtime include path")
 
 
 add_custom_command(
@@ -26,7 +28,7 @@ add_custom_command(
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/ML/MLParser.h
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/ML/MLVisitor.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/ML/MLVisitor.h
-        COMMAND java -jar /usr/local/lib/antlr-4.7.1-complete.jar -Dlanguage=Cpp -no-listener -visitor -o ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/ML ML.g4
+        COMMAND java -jar "${ANTLR_PATH}" -Dlanguage=Cpp -no-listener -visitor -o ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/ML ML.g4
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/resources/grammar/
         DEPENDS resources/grammar/ML.g4
         COMMENT "Generating MlParser, MlLexer, and MlVisitor."
@@ -44,7 +46,7 @@ add_custom_command(
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/Pre/PreParser.h
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/Pre/PreVisitor.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/Pre/PreVisitor.h
-        COMMAND java -jar /usr/local/lib/antlr-4.7.1-complete.jar -Dlanguage=Cpp -no-listener -visitor -o ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/Pre Pre.g4
+        COMMAND java -jar "${ANTLR_PATH}" -Dlanguage=Cpp -no-listener -visitor -o ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/Pre Pre.g4
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/resources/grammar/
         DEPENDS resources/grammar/Pre.g4
         COMMENT "Generating  PreParser, PreLexer, and PreVisitor."
@@ -62,7 +64,7 @@ add_custom_command(
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/tf/tfParser.h
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/tf/tfVisitor.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/tf/tfVisitor.h
-        COMMAND java -jar /usr/local/lib/antlr-4.7.1-complete.jar -Dlanguage=Cpp -no-listener -visitor -o ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/tf tf.g4
+        COMMAND java -jar "${ANTLR_PATH}" -Dlanguage=Cpp -no-listener -visitor -o ${CMAKE_CURRENT_SOURCE_DIR}/antlr4/tf tf.g4
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/resources/grammar/
         DEPENDS resources/grammar/tf.g4
         COMMENT "Generating tfParser, tfLexer, and tfVisitor."
@@ -72,7 +74,14 @@ add_custom_command(
 
 include_directories(include)
 include_directories(antlr4)
-include_directories(/usr/local/include/antlr4-runtime/)
+include_directories("${ANTLR_RUNTIME}")
+if (DEFINED PISTACHE_INCLUDE)
+    include_directories("${PISTACHE_INCLUDE}")
+endif()
+
+if (DEFINED PISTACHE_LIBRARY_PATH)
+    link_directories("${PISTACHE_LIBRARY_PATH}")
+endif()
 
 
 add_executable(ml2sql
