@@ -15,6 +15,7 @@
 #include <list>
 #include <memory>
 #include <string>
+#include <iostream>
 // pistache
 #include "pistache/endpoint.h"
 #include "pistache/http_header.h"
@@ -22,6 +23,20 @@
 
 using namespace antlr4;
 using namespace Pistache;
+
+static std::string escapeEscapes(const std::string& in) {
+    std::stringstream ss;
+    size_t idx = 0;
+    while (idx < in.size()) {
+        if (in[idx] == '\n') {
+            ss << '\\' << 'n';
+        } else {
+            ss << in[idx];
+        }
+        ++idx;
+    }
+    return ss.str();
+}
 
 class RestHandler : public Http::Handler {
 public:
@@ -85,6 +100,7 @@ public:
       if (parser.getNumberOfSyntaxErrors() == 0) {
         MyMLVisitor visitor(target, csv, useModifiedCsv);
         std::string result = visitor.visit(tree);
+        result = escapeEscapes(result);
         if (!result.empty()) {
           response.send(Http::Code::Ok, "{\"lang\": \"" + targetlang +
                                             "\",\"result\": \"" + result +
