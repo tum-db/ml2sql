@@ -44,8 +44,14 @@ public:
   void onRequest(const Http::Request &request, Http::ResponseWriter response) {
     response.headers()
         .add<Http::Header::AccessControlAllowOrigin>("*")
-        .add<Http::Header::AccessControlAllowMethods>("GET, PUT")
+        .add<Http::Header::AccessControlAllowMethods>("GET, POST, PUT")
         .add<Http::Header::AccessControlAllowHeaders>("content-type");
+
+    if (request.method() == Http::Method::Options) {
+        // it's a preflight request
+        response.send(Http::Code::Ok);
+        return;
+    }
     int target;
     bool csv = false, useModifiedCsv = false;
     picojson::value jsonval; // json input object
