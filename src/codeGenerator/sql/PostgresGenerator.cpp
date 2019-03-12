@@ -269,7 +269,7 @@ namespace CodeGenerator {
         ss << CREATEARRAY << OPENARRAYBRACE << list << CLOSEARRAYBRACE;
         if(oldDims == -1){
             oldDims++;
-            ss << "::double precision[]";
+            ss << "::float[]";
         }
         return new Variable(ss.str(), type, oldDims + 1);
     }

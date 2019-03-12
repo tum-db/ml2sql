@@ -32,7 +32,7 @@ namespace CodeGenerator {
         if(type == Variable::INTEGER){
             return new Variable(num , type );
         }else{
-            return new Variable(num + "::double precision", type );
+            return new Variable(num + "::float", type );
         }
 
     }
@@ -59,7 +59,7 @@ namespace CodeGenerator {
         string names;
         for (const string &s : *cols) {
             create << sep << endl;
-            create << ML_TAB << s << " DOUBLE PRECISION";
+            create << ML_TAB << s << " float";
             names += sep;
             names += s;
             sep = ",";

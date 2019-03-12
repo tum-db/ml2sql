@@ -99,7 +99,7 @@ def main():
     A = np.array([ np.array([ 2])])
     print( '{}'.format(  A))
 
-if __name__ == "__main__": main()
+main()
 "}
 
 ```

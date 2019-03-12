@@ -369,7 +369,7 @@ namespace CodeGenerator {
 
 	stringstream PythonGenerator::getCleanup() {
 		stringstream ss;
-		ss << "if __name__ == \"__main__\": main()";
+		ss << "main()";
 		return ss;
 	}
 

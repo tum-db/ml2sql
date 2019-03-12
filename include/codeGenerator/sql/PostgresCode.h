@@ -10,8 +10,8 @@
 #define BEGIN "begin"
 #define EXPEND ";"
 
-#define TFLOAT "DOUBLE PRECISION"
-#define TINT "DOUBLE PRECISION"
+#define TFLOAT "float"
+#define TINT "float"
 #define TBOOL  "boolean"
 
 
@@ -48,7 +48,7 @@
 
 #define DEFFUNCTION(n) "CREATE OR REPLACE FUNCTION " << n
 
-#define FILLARRAY_BEGIN(v) "array_fill( " << v << "::double precision, ARRAY["
+#define FILLARRAY_BEGIN(v) "array_fill( " << v << "::float, ARRAY["
 #define FILLARRAY_END "])"
 #define PRINT "RAISE NOTICE"
 #define PLOT(fileName , xData , yData , xLable, yLable, type ) "plot_data(" << fileName << ", " << xData << ", " \

@@ -9,8 +9,8 @@
 #define BEGIN "begin"
 #define EXPEND ";"
 
-#define TFLOAT "double precision"
-#define TINT "double precision"//"integer"
+#define TFLOAT "float"
+#define TINT "float"//"integer"
 #define TBOOL  "boolean"
 
 
@@ -49,7 +49,7 @@
 
 
 #define PRINT "debug_print"
-#define FILLARRAY_BEGIN(v) "array_fill( " << v << "::double precision , "
+#define FILLARRAY_BEGIN(v) "array_fill( " << v << "::float, "
 #define FILLARRAY_END ")"
 
 
