@@ -24,6 +24,19 @@
 using namespace antlr4;
 using namespace Pistache;
 
+static std::string escapeQuoted(const std::string& in) {
+    std::stringstream ss;
+    size_t idx = 0;
+    while (idx < in.size()) {
+        if (in[idx] == '"') {
+            ss << '\\';
+        }
+        ss << in[idx];
+        ++idx;
+    }
+    return ss.str();
+}
+
 static std::string escapeEscapes(const std::string& in) {
     std::stringstream ss;
     size_t idx = 0;
@@ -83,7 +96,7 @@ public:
       csv = jsonval.get("useModifiedCsv").evaluate_as_boolean();
     }
     std::string command = " | gcc -D" + targetlang + " -E -x c++ -";
-    std::stringstream stream = exec("echo \"" + inputcode + "\"" + command);
+    std::stringstream stream = exec("echo \"" + escapeQuoted(inputcode) + "\"" + command);
     ANTLRInputStream input(stream);
     PreLexer prelexer(&input);
     CommonTokenStream pretokens(&prelexer);
@@ -95,7 +108,7 @@ public:
       // This part is ugly: we receive the preprocessed string in order to
       // C-preprocess it again. Call C-Preprocessor again since imports may us
       // preprocess statments loaded!
-      res = exec("echo \"" + res + "\"" + command).str();
+      res = exec("echo \"" + escapeQuoted(res) + "\"" + command).str();
       //-----------------------------------------------------------------------------------------------------
       stream << res; // Fill the stream with the preprocessed input
       ANTLRInputStream input(stream);
