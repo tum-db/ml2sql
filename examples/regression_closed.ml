@@ -2,8 +2,8 @@ import time
 import regression
 import functions
 
-#include "include/loadTaxiData.ml"
-#include "include/loadTestTaxiData.ml"
+#include "ml2sql/examples/include/loadTaxiData.ml"
+#include "ml2sql/examples/include/loadTestTaxiData.ml"
 
 create tensor DATA from taxiData(trip_seconds, trip_miles, pickup_community_area, dropoff_community_area, fare, tips)
 create tensor TEST_DATA from taxiDataTest(trip_seconds, trip_miles, pickup_community_area, dropoff_community_area, fare, tips)
