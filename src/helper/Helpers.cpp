@@ -16,7 +16,7 @@ std::stringstream exec(std::string cmd) {
     std::shared_ptr<FILE> pipe(popen(cmd.c_str(), "r"), pclose);
     if (!pipe) throw std::runtime_error("popen() failed!");
     while (!feof(pipe.get())) {
-        if (fgets(buffer.data(), 128, pipe.get()) != nullptr)
+        if (fgets(buffer.data(), 1024, pipe.get()) != nullptr)
             result << buffer.data();
     }
     return result;
