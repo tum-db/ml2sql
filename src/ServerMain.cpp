@@ -43,6 +43,8 @@ static std::string escapeEscapes(const std::string& in) {
     while (idx < in.size()) {
         if (in[idx] == '\n') {
             ss << '\\' << 'n';
+        } else if (in[idx]=='\\'){
+            ss << '\\' << '\\';
         } else {
             ss << in[idx];
         }
@@ -145,7 +147,7 @@ int main(int argc, char **argv) {
     }
   }
   Pistache::Address addr(Pistache::Ipv4::any(), Pistache::Port(port));
-  auto opts = Pistache::Http::Endpoint::options().threads(1);
+  auto opts = Pistache::Http::Endpoint::options().threads(1).maxPayload(1024 * 1024);
   Http::Endpoint server(addr);
   server.init(opts);
   server.setHandler(Http::make_handler<RestHandler>());
